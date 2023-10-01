@@ -75,18 +75,18 @@ em{
 .story-area{
   &__1{
     @include story-background(
-      "/src/imagenes/storyblock/story-1.jpg",
+      "src/imagenes/storyblock/story-1.jpg",
       0rem);
   }
   &__2{
     @include story-background(
-      "/src/imagenes/storyblock/story-2.jpg",
+      "src/imagenes/storyblock/story-2.jpg",
       -0rem
       );
   }
   &__3{
     @include story-background(
-      "/src/imagenes/storyblock/story-3.jpg",
+      "src/imagenes/storyblock/story-3.jpg",
       1rem
       1rem);
   }
