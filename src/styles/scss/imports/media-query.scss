@@ -1,0 +1,231 @@
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+
+    // Seccion 0-1023px
+
+    .seccion{
+        margin-top: 0;
+    }
+
+    .story-area{
+        &__1{
+        @include story-background(
+            "/src/imagenes/storyblock/story-1.jpg",
+            65%);
+        display: flex;
+        align-items: end;
+        }
+
+        &__2{
+        @include story-background(
+            "/src/imagenes/storyblock/story-2.jpg",
+            30%
+            );
+            display: flex;
+            align-items: end;
+        }
+        &__3{
+        @include story-background(
+            "/src/imagenes/storyblock/story-3.jpg",
+            95%);
+            display: flex;
+            align-items: end;
+        }
+        
+    }
+
+
+    .text-column{
+
+        &__right, &__left{
+        flex: 1 0 100%;
+        width: 100%;
+        height: 100%;
+        padding: .8rem .5rem;  
+        
+        h2{
+            @include fontSize("large");
+            margin: .5rem 0;
+        }  
+        } 
+
+    }
+
+    .text-slideshow{
+        &__frame{
+        width: 100%;
+        height: 75%;
+        }
+
+        &__text{
+        padding-top: .5rem;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        display: none;
+        @include fontSize("normal");
+        }
+    }
+
+    .dot-nav{
+        height: 6%;
+        padding: 0;
+        margin: .4rem 0;
+
+        .dot{
+        height: 15px;
+        width: 15px;
+        margin: 0 1rem;  
+        border-width: 3px; 
+        }
+    } 
+
+    //Cronología 0-1023px
+
+    #section-4 h2{  
+
+        margin-left: 2rem;
+        margin-top: 6rem;
+    }
+
+    .cronologia{
+        padding: .5rem;
+        display: grid;
+        grid: repeat(12, 1fr) / 1fr;
+        
+        
+        h3{
+        @include fontSize("large");
+        font-family: $font-fam-header;
+        margin-top: 2rem;
+        border-top: none;
+        border-bottom: solid rgba(211, 211, 211, 0.774) .1rem;
+        }  
+
+        ul{
+        font-size: .6rem;
+        line-height: .7rem;
+        word-spacing: .1rem;
+        margin-top: 1rem;
+        padding: 0rem .4rem .4rem;
+        list-style: disc;
+        border-top:none;
+        }    
+    }
+
+
+    //HEADER & NAV 0-1023px
+    header{   
+        
+        .top-bar{
+        height: 8%;
+        .nav-button{
+            top: 2vh;
+            margin: 0;
+            width: 3rem;
+            height: 1.5rem;
+        }
+        }
+
+        .header-body{
+        justify-content: start;
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            max-width: 90%;
+            height: auto;
+        }
+
+        p, h1{
+            display: block;
+            position: static;
+        }
+
+        p, h1{
+            margin-top: 4%;
+            padding: 0;
+        }
+        hr{
+            position: absolute;
+            bottom: 0;
+        }
+
+        } 
+
+        .nav-panel{
+        left: -130vw;
+        width: 100vw;
+        padding: 15% 0 0;
+        ul{
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch;
+            li{
+            flex: 1 1 50%;
+            width: auto;
+            max-width: 50%;
+            }
+        }
+        
+        .link-display{
+
+            &__1{
+            background-position-y: 30%;
+            .ribbon{
+                height: 5rem; 
+                p{
+                line-height: 1.5rem;
+                @include fontSize("large");
+                }
+            }
+            }
+            &__2{
+            
+            .ribbon{
+                height: 5rem;
+                p{
+                line-height: 1.5rem;
+                @include fontSize("large");
+                }
+            }
+            }
+            &__3{
+            background-position-y: 0%;
+            .ribbon{
+                height: 5rem;
+                p{
+                line-height: 1.5rem;
+                @include fontSize("large");
+                }
+            }
+
+            
+            }
+            &__4{
+            background-position-y: 85%;
+            .ribbon{
+                height: 5rem;
+                p{
+                line-height: 1.5rem;
+                @include fontSize("large");
+                }
+            }
+            }
+        }
+        
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width:1200px){
+
+    .text-column{
+  
+        &__right, &__left{
+            height: 45%;
+        }     
+    }
+}

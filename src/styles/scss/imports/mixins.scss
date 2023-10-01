@@ -1,0 +1,163 @@
+@mixin fontSize($fontSize){
+  @media only screen and (min-width: 1024px)
+  {
+    @if $fontSize == "em" {
+      font-size: 1.2rem;
+    }
+    @if $fontSize == "normal" {
+      font-size: 1rem;
+      letter-spacing: .15rem;
+      word-spacing: .1rem;
+      line-height: 2rem;
+      text-decoration: none;
+    }
+    @if $fontSize == "large" {
+      font-size: 1.5rem;
+    }
+    @if $fontSize == "Xlarge" {
+      font-size: 3rem;
+      letter-spacing: .5rem;
+      word-spacing: 1rem;
+    }
+    @if $fontSize == "XXlarge" {
+      font-size: 6rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      word-spacing: 3rem;
+    }
+  }
+  @media only screen and (min-width: 701px) and (max-width: 1023px)
+  {
+
+    @if $fontSize == "em" {
+      font-size: 1.2rem;
+    }
+    @if $fontSize == "normal" {
+      font-size: 1rem;
+      letter-spacing: .1rem;
+      word-spacing: .1rem;
+      line-height: 1.5rem;
+      text-decoration: none;
+    }
+    @if $fontSize == "large" {
+      font-size: 2rem;
+      letter-spacing: .15rem;
+    }
+    @if $fontSize == "Xlarge" {
+      letter-spacing: .25rem;
+      word-spacing: .8rem;
+      font-size: 2.5rem;
+    }
+    @if $fontSize == "XXlarge" {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      word-spacing: 3rem;
+    }
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 700px)
+  {
+
+    @if $fontSize == "em" {
+      font-size: .85rem;
+    }
+    @if $fontSize == "normal" {
+      font-size: .7rem;
+      letter-spacing: .05rem;
+      word-spacing: .15rem;
+      line-height: 1.1rem;
+      text-decoration: none;
+    }
+    @if $fontSize == "large" {
+      font-size: 1.5rem;
+      letter-spacing: .15rem;
+    }
+    @if $fontSize == "Xlarge" {
+      letter-spacing: .25rem;
+      word-spacing: .8rem;
+      font-size: 2rem;
+    }
+    @if $fontSize == "XXlarge" {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      word-spacing: 3rem;
+    }
+  }
+}
+@mixin separador($lado){
+    margin: 0;
+    width: 100%;
+    z-index: 1000;
+
+  @if $lado == 'top'{
+    border-top: solid 5px rgba(211, 211, 211, 0.774);
+  }
+  @if $lado == 'bottom'{
+    border-bottom: solid 5px rgba(211, 211, 211, 0.774);
+  }
+}
+@mixin nav-button{
+  content: " ";
+  display: block;
+  width:90%;
+  height: .25rem;
+  background-color: whitesmoke;
+  margin: .5rem 0;
+  transition: .35s;
+  border-radius: 10% / 30%;
+}
+
+@mixin nav-background($num)
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  background-image: url("/src/imagenes/nav/#{$num}.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  z-index: 101;
+  filter: grayscale(100%);
+  transition-property: filter, transform;
+  transition-duration: .8s;
+    &:hover{
+      filter: grayscale(0%);
+    }
+}
+
+@mixin story-background($image, $offsetX: 0, $offsetY:0){
+  width: 100%;
+  height: 100%;
+  background: $background-alpha-3, 
+              url($image);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position-x: $offsetX;
+  background-position-y: $offsetY;
+}
+
+@mixin ribbon{
+  margin: auto 0;
+  max-width: 100%;
+  height: 7rem; 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba($background-black,  .85);
+  z-index: 103;
+  p{
+    width: 100%;
+    margin: auto 1%;
+    text-align: center;
+    font-size: $font-large;
+    font-weight: 600;
+    color: rgb(190, 144, 111);     
+  }
+}

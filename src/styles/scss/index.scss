@@ -1,0 +1,345 @@
+/*Hecho con SASS*/
+
+//----Variables---
+@import "imports/variables.scss";
+//----Mixins----
+@import "imports/mixins.scss";
+//----RESET----
+@import "imports/reset.scss";
+//---- Selectors ----
+
+body{
+  background: $background-color-1; 
+  overflow-x: hidden;
+}
+
+h1, h2, 
+h3, h4, h5, 
+p, li, a{
+  color: rgb(231, 231, 231);
+}
+  
+h1, h2, h3{
+  font-family: $font-fam-header;    
+}
+
+h4, h5, 
+p, li, a{
+  font-family: $font-fam-text;
+  color: rgb(177, 177, 177);
+}
+h1{
+  @include fontSize("XXlarge");
+}
+
+h2{
+  @include fontSize("Xlarge");
+ 
+}
+
+p, li, a{
+  @include fontSize("normal");
+ 
+}
+
+em{
+  color: rgb(231, 231, 231);
+  @include fontSize("em");
+}
+
+//---- Classes ----
+
+// Separadores
+.separador-top{
+  @include separador('top');
+}
+.separador-bottom{
+  @include separador('bottom');
+}
+
+//---- Seccciones ----
+
+// Seccion
+.seccion{
+  width: 100vw;
+  height: 100vh;
+  margin-top: 10rem;
+  padding: 0;
+  background: $background-color-1;  
+}
+
+#section-1{
+  margin-top: 0;
+}
+
+.story-area{
+  &__1{
+    @include story-background(
+      "/src/imagenes/storyblock/story-1.jpg",
+      0rem);
+  }
+  &__2{
+    @include story-background(
+      "/src/imagenes/storyblock/story-2.jpg",
+      -0rem
+      );
+  }
+  &__3{
+    @include story-background(
+      "/src/imagenes/storyblock/story-3.jpg",
+      1rem
+      1rem);
+  }
+  
+}
+
+//Text slideshow
+  
+.text-column{
+
+  &__right{
+    width: 35%;
+    height: 100%;
+    padding: 6rem 3rem 0;
+    float: right;
+    background: $background-alpha-1;
+  }
+
+  &__left{
+    width: 35%;
+    height: 100%;
+    padding: 6rem 3rem 0;
+    float: left;
+    background: $background-alpha-1;
+  }
+
+  h2{
+    margin: 2rem 0;
+  }
+}
+
+
+.text-slideshow{
+  &__frame{
+    width: 100%;
+    height: 85%;
+  }
+
+  &__text{
+    padding-top: 2rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    display: none;
+
+    &.active-text{
+      display: block;
+    }
+  }
+}
+
+.dot-nav{
+    height: 3%;
+    text-align: center;
+    margin: 1rem;
+
+  .dot{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 1rem;
+    background-color: #a7c6d400;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #f3d1aa85;
+    display: inline-block;
+    transition-property: background-color, border-color;
+    transition-duration:  0.4s;
+    transition-timing-function: ease;
+
+    &:hover, &.active-dot{
+      background-color: #978168;
+      border-color: #978168;
+    }
+  }
+}
+
+//Cronología
+
+#section-4 h2{  
+  max-width: 100%;
+  margin-left: 4rem;
+  margin-top: 10rem;
+}
+
+.cronologia{
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  display: grid;
+  grid: repeat(6, 1fr) / 2fr 4.25fr .5fr 2fr 4.25fr;
+  
+    
+  h3{
+    @include fontSize("Xlarge");
+    font-family: $font-fam-header;
+    border-top: solid rgba(211, 211, 211, 0.774) .1rem;
+    padding-top: .6rem;
+  }
+  
+  ul{
+    border-top: solid rgba(211, 211, 211, 0.774) .1rem;
+    padding-top: .6rem;
+    list-style: disc;
+  }
+
+  
+}
+
+//HEADER & NAV
+
+header{
+
+  width: 100vw;
+  height: 100vh;
+  background: $background-default;
+  
+  .top-bar{
+    height: 15%;
+    width: 100%;
+    display: block;
+
+    
+    .nav-button{
+      margin: 1rem, 1rem, 0;
+      position: relative;
+      left: 1rem;
+      top: 1rem;
+      width: 3.5rem;
+      height: 2rem;
+      cursor: pointer;
+      appearance: none;
+      background: none;
+      outline: none;
+      border: none;
+      z-index: 101;
+
+      div{
+        @include nav-button; 
+        transition-property: transform, opacity;
+        transition-duration: .35s;
+      }  
+      .bar-one
+      {
+        &.isMenuActive{
+          transform: rotate(-45deg) translate(-.5rem, .4rem); 
+        }
+      } 
+      .bar-two{
+        &.isMenuActive{
+          @include nav-button; 
+          opacity: 0;
+        }
+      }
+      .bar-three{
+        &.isMenuActive{       
+          @include nav-button; 
+          transform: rotate(45deg) translate(-.6rem, -.6rem);   
+        }    
+      }              
+    }
+  }
+  
+        
+  .header-body{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  
+    img{
+      height: 90%;
+      margin: 0 55%;
+      position: absolute;
+      opacity: .6;
+    }
+  
+    h1, p{
+      text-align: center;
+      z-index: 5;
+      padding: 1.5rem 0 0;
+    }
+    h1{
+      margin-bottom: 12%;
+    }
+    p{
+      word-spacing: .7rem;
+    }
+    
+  }
+  .nav-panel{
+    position: absolute;
+    top:0;
+    left: -100vw;
+    padding-left: 4%;
+    width: 100%;
+    height: 100%;
+    background-color: $background-black;
+    transition: left 1s;
+    z-index: 100;
+
+    &.isMenuActive{
+      left: 0vw;
+    }
+  
+    ul{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      
+      li{
+        
+        flex: 1 1 25%;
+      }
+    }
+  
+    .link-display{
+
+      width: 100%;
+      height: 100%;
+      &__1{
+        @include nav-background('1');
+        .ribbon{
+          @include ribbon;
+        }
+      }
+      &__2{
+        @include nav-background('2');
+        .ribbon{
+          @include ribbon;
+        }
+      }
+      &__3{
+        @include nav-background('3');
+        .ribbon{
+          @include ribbon;
+        }
+      }
+      &__4{
+        @include nav-background('4');
+        .ribbon{
+          @include ribbon;
+        }
+      }
+    }
+  }
+}
+
+/*
+**** MEDIA QUERY ****
+*/
+
+@import "imports/media-query.scss";

@@ -1,0 +1,34 @@
+//Color
+$color-background-base-1: rgba(29,31,48,1);
+$color-background-base-2: rgba(6,6,12,1);
+
+$background-default: radial-gradient(
+  circle at 65vw 70%,
+  rgba(29,31,48,1),
+  rgba(6,6,12,1));
+
+$background-alpha-1: radial-gradient(
+circle at 65vw 70%,
+rgba(29,31,48,.75),
+rgba(6,6,12,.75));
+
+$background-alpha-2: linear-gradient(
+rgba(29,31,48,.55),
+rgba(6,6,12,.55));
+
+$background-alpha-3: linear-gradient(
+rgba(29,31,48,.35),
+rgba(6,6,12,.35));
+
+$background-color-1:#11111b;
+$background-black: #06060c;
+
+//Font Size
+$font-normal: 1rem;
+$font-large: 1.5rem;
+$font-Xlarge: 3rem;
+$font-XXlarge: 6rem;
+
+//Font Families
+$font-fam-header: ("Glook", serif);
+$font-fam-text:("Montserrat", sans-serif);

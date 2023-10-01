@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Glook|Montserrat">
+    <title>Amelia Earhart</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <button class="nav-button" id="nav-button">
+                <div class="bar-one" id="bar-one"></div>
+                <div class="bar-two" id="bar-two"></div>
+                <div class="bar-three" id="bar-three"></div>     
+            </button>
+        </div>
+                    
+        <div class="header-body">
+
+            <p>La pionera del aire</p>
+            <h1>Amelia Earhart</h1>
+            <img src="src/imagenes/amelia-principal.png" />    
+            <hr class="separador-bottom">
+        </div>
+        <div class="nav-panel" id="nav-panel">
+            <ul>
+                <li>
+                    <a class="link-display__1" href="#section-1">                     
+                        <div class="ribbon">
+                            <p>En tierra</p>
+                        </div>
+                    </a>        
+                </li>
+                <li>
+                    <a class="link-display__2" href="#section-2">          
+                        <div class="ribbon">
+                            <p>Sobre el atlántico</p>
+                        </div>
+                    </a>        
+                </li>
+                <li>
+                    <a class="link-display__3" href="#section-3">
+                        <div class="ribbon">
+                            <p>A través del mundo</p>
+                        </div>
+                    </a>                                                
+                </li>
+                <li>
+                    <a class="link-display__4" href="#section-3">    
+                        <div class="ribbon">
+                            <p>Cronología</p>
+                        </div>
+                    </a>          
+                </li>
+            </ul>
+        </div>   
+    </header>
+    <main>
+
+
+        <!-----Sección 1----->
+
+        <section  class="seccion" id="section-1">
+            <div class="story-area__1">
+                <div class="text-column__left" id="slideshow-1">
+                    <h2>En tierra</h2>
+                    <div class="text-slideshow__frame">
+                        <div class="text-slideshow__text">
+                            <p>Amelia Earhart nace en <em>1897</em>, en  en Atchinson (Kansas)</p>
+                            <br />
+                            <p>Durante sus primeros años, Amelia Earhart es conocida como <em>Meeley</em>, y va a todos lados acompañada por
+                                su hermana menor, Grace, a la que llama <em>Pidge</em>.</p>
+                                <br />
+                            <p>
+                                Juntas, motivadas por el espíritu aventurero de <em>Meeley</em>, pasan horas trepando árboles y cazando ratas con un pequeño rifle del calibre .22.
+                                Con el tiempo, juntaron una pequeña colección de pequeños animales que incluye gusanos, polillas y, hasta en alguna ocasión alguna rana.
+                            </p>
+                 
+                        </div>
+                        <div class="text-slideshow__text">
+                            <p>En <em>1904</em>, con la ayuda de su tío las hermanas lograron construir una pequeña infraestructura con forma de rampa. 
+                                El diseño estaba inspirado en un parque de atracciones que habían visto en St. Louis, y atravesaba gran parte del jardín, 
+                                pasando por el tejado de la caseta de herramientas.</p>
+                                <br />
+                            <p>Este "primer vuelo" a bordo de una caja de madera que se deslizaría por la rampa, acabó de forma dramática. Amelia y su vehículo 
+                                se estrellarían contra el suelo, para el susto mayúsculo de los asistentes.</p>
+                                <br />
+                            <p>
+                                <em>Meeley</em> emerge del interior de la caja, con el labio hinchado y algún que otro rasguño, pero sin ninguna herida de gravedad.
+                                 "¡Pidge, es como volar!", aseguró a su hermana.
+                            </p>               
+                        </div>
+                        <div class="text-slideshow__text">
+                            <p>La primera vez que pudo ver un un biplano, durante la feria de <em>Des Moines 1908</em> en Iowa, lo describió como "un trasto de alambre oxidado
+                                y madera, para nada interesante". </p>
+                                <br />
+                            <p>
+                                En torno a <em>1918</em>, tras convalecer a causa de la pandemia, acudió con una amiga a la Canadian National
+                                Exhibition en Toronto. En un claro apartado, un as de combate de la Primera Guerra Mundial, 
+                                voló a escasos metros por encima de ellas. "Seguro que pensó que echaríamos a correr", afirmó Amelia, que se mantuvo firme en el sitio con su amiga.
+                            </p>
+                                <br />
+                            <p>
+                                Tiempo después, la entonces ya <em>pionera del aire</em>, lo recordaba de esta manera: "En su momento no lo comprendí, pero creo que el
+                                avioncito rojo me dijo algo mientras silbaba por encima de nuestras cabezas".
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dot-nav">
+                        <span class="dot" onclick="showSlide(0,0)"></span>
+                        <span class="dot" onclick="showSlide(0,1)"></span>
+                        <span class="dot" onclick="showSlide(0,2)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-----Sección 2----->
+
+
+        <section  class="seccion" id="section-2">
+            <div class="story-area__2">
+                <div class="text-column__right" id="slideshow-2">
+                    <h2>Sobre el Atlántico</h2>
+                    <div class="text-slideshow__frame">
+                        <div class="text-slideshow__text">
+                            <p>
+                                <em>Frank Hawks</em>, futuro piloto de carreras, trabajaba en un encuentro de entusiastas de la aviación en el <em>Long Beach de 1920</em>. 
+                                 Amelia le pagó 10 dólares (que valen 153.51$ en 2023) por 10 minutos de vuelo. "En el momento que sobrepasamos los doscientos o trescientos metros 
+                                 de altura, supe que quería pilotar".
+                            </p>
+                            <br />
+                            <p>
+                                Mientras trabajaba en Boston como trabajadora social, en <em>1921</em>, con la ayuda de su madre logró juntar 1.000 dólares, que emplearía en sus clases 
+                                de vuelo y en comprar su primer biplano biplaza <em>Kinner Aister</em>, al que apodó "El canario".
+                            </p>
+                            <br />
+                            <p>Éste avión sería con el que batiría en <em>1922</em> el récord femenino de altitud, sobrepasando los 14.000 pies (4.267 metros)</p>
+                        </div>
+                        <div class="text-slideshow__text">
+                            <p>
+                                En <em>1928</em> recibe una llamada que estuvo a punto de rechazar. Su interlocutor, proponía que ella fuera la primera mujer en cruzar 
+                                el océano Atlántico en avión. Amelia piensa que todo esto se trata de una broma pesada, hasta que su interlocutor le proporciona excelentes 
+                                referencias. Amelia acepta.
+                            </p>
+                            <br />
+                            <p>
+                                El vuelo se realiza a bordo de un <em>Fokker F7</em>, apodado "Amistad". A bordo, va el copiloto y mecánico Louis E. "Slim" Gordon. Parten del 
+                                 puerto  de Trepassey, Newfoundland, y aterrizan en Burry Port, en Gales. El vuelo dura <em>21 horas</em>. 
+                            </p>
+                            <br />
+                            <p>
+                                La noticia llenó las portadas de todos los periódicos, ya que ese mismo año, tres mujeres habían muerto tratando de ser la primera en 
+                                cruzar el Atlántico. 
+                            </p>
+                        </div>
+                        <div class="text-slideshow__text">
+                            <p>
+                                Los siguientes años, Amelia Earhart centró su vida en torno a la aviación. Queda tercera en el derby de Cleveland e intenta superar sus anteriores
+                                marcas.
+                            </p>
+                            <br />
+                            <p>
+                                En <em>1931</em>, se casa con el periodista George Putnam, al que conoció en una entrevista antes de cruzar el Atlántico y con quien
+                                desarrolló una amistad durante las preparaciones del vuelo. Amelia Earthart describió el matrimonio como "una asociación con control dual".
+                            </p>
+                            <br />
+                            <p>
+                                Un año más tarde, vuelve a sobrevolar el Atlántico. Ésta vez vuela sola y se convierte en la segunda persona en hacerlo después de 
+                                <em>Lindberg</em>. Desde el mismo punto de partida que la vez anterior, esta realiza un aterrizaje forzoso en las afueras de Londonderry,
+                                Irlanda. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dot-nav">
+                        <span class="dot" onclick="showSlide(1,0)"></span>
+                        <span class="dot" onclick="showSlide(1,1)"></span>
+                        <span class="dot" onclick="showSlide(1,2)"></span>
+                    </div>
+                </div>
+            </div>          
+        </section>
+
+
+        <!-----Sección 3----->
+
+
+        <section class="seccion" id="section-3">
+            <div class="story-area__3">
+                <div class="text-column__left" id="slideshow-3">
+                    <h2>Despegue</h2>
+                    <div class="text-slideshow__frame">
+                        <p class="text-slideshow__text">Lorem <em>ipsum</em>, dolor sit amet consectetur adipisicing elit. Magni possimus maxime perferendis sit est eum exercitationem expedita odit cupiditate. Sed quam blanditiis est velit vel reiciendis saepe itaque explicabo doloremque!
+                        Beatae rerum ex tempora ratione corporis debitis! Similique, vel ut, atque doloremque esse veniam sapiente quo maxime architecto, suscipit ipsum maiores sint ipsa. Aspernatur odit nam, harum a perspiciatis quis.
+                        </p>
+                        <p class="text-slideshow__text">Lorem ipsum dolor sit amet concotion banana split. Reprehenderit quo numquam tempore, quod repudiandae quas dolorem quia! Nihil quos ab quae accusantium quisquam fugit voluptatum eum, eligendi voluptatem repudiandae tenetur!
+                        Accusantium quia nesciunt praesentium deserunt laudantium excepturi corporis, adipisci ratione magnam, asperiores pariatur facere voluptate aliquam sequi fugiat repellendus, sit illo doloribus dolor ducimus aliquid neque iste. Nostrum, quibusdam quos.
+                        Nobis excepturi laudantium debitis! Atque, maxime impedit. Non, possimus voluptatum mollitia amet esse nihil dolorum aperiam voluptatibus cumque similique error tenetur in omnis culpa vel ex delectus. Sint, perferendis magni.
+                        </p>
+                        <p class="text-slideshow__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quos quaerat neque quae voluptatum minus ipsam? Dolor optio ea, eaque maxime perferendis exercitationem eum nemo rerum nulla veritatis error at?
+                        Consequuntur, optio! Ut doloremque laudantium temporibus cum eius harum atque illum inventore natus, quisquam blanditiis consequuntur fugiat repellendus obcaecati perspiciatis corporis assumenda a rerum pariatur magni ex animi architecto? Aut?
+                        Delectus dolor optio soluta voluptatibus numquam cum, id hic, nam veniam totam ipsa adipisci at officiis consectetur ducimus accusantium perspiciatis officia blanditiis. Illum perferendis dignissimos ipsam id sequi adipisci autem!
+                        Vero corrupti fugit explicabo facilis odio optio dolorum molestias quod? Nemo cumque similique blanditiis aliquid minima perferendis vero alias illum enim, voluptatem distinctio libero quas neque eveniet error sapiente quam!
+                        Dicta harum corporis tempore doloremque aut dolorem ipsam. Hic reiciendis tenetur animi et amet perferendis nobis quis voluptatum, adipisci saepe. Nisi placeat repellat officia consectetur inventore nam culpa nulla magni?
+                        Iusto tenetur unde eveniet iure, quo sit ipsa, omnis sed maxime fuga ex placeat hic labore vitae earum voluptatum amet recusandae similique fugit aliquid! Ipsam nobis mollitia fuga molestiae earum.
+                        Necessitatibus, enim reiciendis. Voluptatum architecto corporis ut necessitatibus aperiam quidem aliquam officiis, labore nihil asperiores cumque nulla eum commodi optio velit, quis dolorem deserunt reiciendis. Doloremque assumenda molestias quaerat quas?
+                        Nesciunt reprehenderit quae maxime quia adipisci, ratione vitae praesentium aliquid a cum neque fugit eos sunt id molestiae, asperiores ad labore dolor nulla dolorum! Eius reprehenderit aliquam aperiam distinctio nihil.
+                        </p>
+                    </div>
+                    <div class="dot-nav">
+                        <span class="dot" onclick="showSlide(2,0)"></span>
+                        <span class="dot" onclick="showSlide(2,1)"></span>
+                        <span class="dot" onclick="showSlide(2,2)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-----Sección 4----->
+
+
+        <section class="seccion" id="section-4">
+            <h2>Cronología</h2>
+            <div class="cronologia">
+                <h3>1921</h3>
+                <ul>
+                    <li>Primeras clases de vuelo.</li>
+                    <li>Compra un <em>Kinner Aister</em> al 
+                        que apoda "El canario"</li>
+                </ul>
+
+
+                <br />
+
+
+                <h3>1922</h3>
+                <ul>
+                    <li>Supera el récord de altitud femenino 
+                        al alcanzar <em>4.267 metros</em> de altura</li>
+                </ul>
+
+                <h3>1928</h3>
+                <ul>
+                    <li>Primera mujer y tercera persona en 
+                        la historia en sobrevolar el Atlántico, 
+                        volando de EE.UU. a Reino Unido.</li>
+                    <li>Publica el libro <em>"20Hrs. 40 Min</em>" y se convierte 
+                        en editora de la revista <em>Cosmopolitan</em>.</li>
+                </ul>
+
+
+                <br />
+
+
+                <h3>1930</h3>
+                <ul>
+                    <li>Fija el récord femenino de velocidad cubriendo 100Km.
+                         sin carga y con carga de 500 Kg.</li>
+                    <li>Establece el récord de velocidad en
+                        <em>291,5 Km/H</em> (181.18 mph).</li>
+                </ul>
+
+                <h3>1932</h3>
+                <ul>
+                    <li>Vuelve a sobrevolar el Atlántico, ésta vez sin acompañante,
+                         convirtiéndose en la segunda persona de la historia
+                         después de <em>Lindberg.</em></li>
+                    <li>
+                        Primera mujer en realizar un vuelo transcontinental, 
+                        de costa a costa de Estados Unidos. Estableciendo el récord
+                        en <em>19h 5m</em>.
+                    </li>
+                </ul>
+
+
+                <br />
+
+
+                <h3>1932</h3>
+                <ul>
+                    <li>Contribuye a la organización y ocupa 
+                        la vicepresidencia de la relaciones públicas para la 
+                        nueva <em>"New York, Philadephia and Washington Airlines".</em></li>
+                </ul>
+
+                <h3>1932</h3>
+                <ul>
+                    <li>Es elegida para la presidencia de <em>Ninety Nines</em>, 
+                    club femenino de aviación que también contribuyó a formar.</li>
+                </ul>
+
+
+                <br />
+
+
+                <h3>1933</h3>
+                <ul>
+                    <li>Mejora el récord de vuelo transcontinental a <em>17h 7min</em></li>
+                </ul>
+
+                <h3>1935</h3>
+                <ul>
+                    <li>Primera persona en volar en solitario, sin paradas
+                        entre Honolulú (Hawái) y Oakland (California).
+                    </li>
+                    <li>
+                        Éste vuelo, de <em>3.875Km</em> (2.408 millas), es el primero en el 
+                        un avión civil lleva una radio emisora/receptora.
+                    </li>
+                </ul>
+
+
+                <br />
+
+
+                <h3>1935</h3>
+                <ul>
+                    <li>Primer piloto que atraviesa en solitario, y sin paradas, 
+                        la distancia entre Los Ángeles y Ciudad de México en <em>13h 23m</em>.
+                    </li>
+                </ul>
+
+                <h3>1935</h3>
+                <ul>
+                    <li>Primer piloto que atraviesa en solitario, y sin paradas, 
+                        la distancia entre Ciudad de México y Newark en <em>14h 19m</em>.
+                    </li>
+                </ul>
+
+
+                <br />
+
+
+                <h3>1937</h3>
+                <ul>
+                    <li>Amelia Earhart, junto con su navegador Fred Noonan, 
+                        se proponen dar la <em>vuelta al mundo</em>.
+                    </li>
+                    <li>
+                        Amelia Earhart se convierte en la primera persona en volar 
+                        desde el Mar Rojo hasta la India.
+                    </li>
+                    <li>
+                        Mientras sobrevuela el último tramo de la ruta, sobre el Pacífico, 
+                        su avión pierde contacto por radio y desaparece.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+</body>
+<script src="src/index.js"></script>
+</html>
+
