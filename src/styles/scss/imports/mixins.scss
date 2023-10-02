@@ -2,7 +2,7 @@
   @media only screen and (min-width: 1024px)
   {
     @if $fontSize == "em" {
-      font-size: 1.2rem;
+      font-size: 1.05rem;
     }
     @if $fontSize == "normal" {
       font-size: 1rem;
@@ -30,13 +30,13 @@
   {
 
     @if $fontSize == "em" {
-      font-size: 1.2rem;
+      font-size: 1.05rem;
     }
     @if $fontSize == "normal" {
       font-size: 1rem;
       letter-spacing: .1rem;
       word-spacing: .1rem;
-      line-height: 1.5rem;
+      line-height: 1.15rem;
       text-decoration: none;
     }
     @if $fontSize == "large" {
@@ -60,13 +60,13 @@
   {
 
     @if $fontSize == "em" {
-      font-size: .85rem;
+      font-size: .7rem;
     }
     @if $fontSize == "normal" {
-      font-size: .7rem;
+      font-size: .65rem;
       letter-spacing: .05rem;
       word-spacing: .15rem;
-      line-height: 1.1rem;
+      line-height: 1rem;
       text-decoration: none;
     }
     @if $fontSize == "large" {
@@ -75,14 +75,14 @@
     }
     @if $fontSize == "Xlarge" {
       letter-spacing: .25rem;
-      word-spacing: .8rem;
+      word-spacing: .4rem;
       font-size: 2rem;
     }
     @if $fontSize == "XXlarge" {
       font-size: 3rem;
       text-transform: uppercase;
-      letter-spacing: 1rem;
-      word-spacing: 3rem;
+      letter-spacing: .5rem;
+      word-spacing: 1rem;
     }
   }
 }
