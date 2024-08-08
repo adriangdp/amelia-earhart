@@ -12,9 +12,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-          text-size-adjust: none;
+  text-size-adjust: none;
   scroll-behavior: smooth;
 }
 
@@ -46,8 +44,7 @@ table {
 
 input {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   border-radius: 0;
 }
 
@@ -169,21 +166,20 @@ em {
 .separador-top {
   margin: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   border-top: solid 5px rgba(211, 211, 211, 0.774);
 }
 
 .separador-bottom {
   margin: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   border-bottom: solid 5px rgba(211, 211, 211, 0.774);
 }
 
 .seccion {
   width: 100vw;
   height: 100vh;
-  margin-top: 10rem;
   padding: 0;
   background: #11111b;
 }
@@ -324,30 +320,34 @@ em {
 }
 
 header {
+  display: block;
   width: 100vw;
   height: 100vh;
   background: radial-gradient(circle at 65vw 70%, rgb(29, 31, 48), rgb(6, 6, 12));
+  z-index: 200;
 }
 header .top-bar {
-  height: 15%;
+  height: 0%;
   width: 100%;
   display: block;
+  position: fixed;
+  overflow: visible;
+  z-index: 300;
 }
 header .top-bar .nav-button {
-  margin: 1rem, 1rem, 0;
-  position: relative;
-  left: 1rem;
+  position: fixed;
+  display: block;
+  left: 2rem;
   top: 1rem;
   width: 3.5rem;
   height: 2rem;
   cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: none;
   outline: none;
   border: none;
-  z-index: 101;
+  z-index: 301;
+  overflow: visible;
 }
 header .top-bar .nav-button div {
   content: " ";
@@ -361,8 +361,16 @@ header .top-bar .nav-button div {
   transition-property: transform, opacity;
   transition-duration: 0.35s;
 }
+header .top-bar .nav-button .bar-one {
+  position: relative;
+  display: block;
+}
 header .top-bar .nav-button .bar-one.isMenuActive {
   transform: rotate(-45deg) translate(-0.5rem, 0.4rem);
+}
+header .top-bar .nav-button .bar-two {
+  position: relative;
+  display: block;
 }
 header .top-bar .nav-button .bar-two.isMenuActive {
   content: " ";
@@ -374,6 +382,10 @@ header .top-bar .nav-button .bar-two.isMenuActive {
   transition: 0.35s;
   border-radius: 10%/30%;
   opacity: 0;
+}
+header .top-bar .nav-button .bar-three {
+  position: relative;
+  display: block;
 }
 header .top-bar .nav-button .bar-three.isMenuActive {
   content: " ";
@@ -388,13 +400,13 @@ header .top-bar .nav-button .bar-three.isMenuActive {
 }
 header .header-body {
   width: 100%;
-  height: 85%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
 header .header-body img {
-  height: 90%;
+  height: 100%;
   margin: 0 55%;
   position: absolute;
   opacity: 0.6;
@@ -411,18 +423,18 @@ header .header-body p {
   word-spacing: 0.7rem;
 }
 header .nav-panel {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: -100vw;
+  left: -100%;
   padding-left: 4%;
   width: 100%;
   height: 100%;
   background-color: #06060c;
   transition: left 1s;
-  z-index: 100;
+  z-index: 201;
 }
 header .nav-panel.isMenuActive {
-  left: 0vw;
+  left: 0%;
 }
 header .nav-panel ul {
   width: 100%;
@@ -597,7 +609,7 @@ header .nav-panel .link-display__4 .ribbon p {
 /*
 **** MEDIA QUERY ****
 */
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .seccion {
     margin-top: 0;
   }
@@ -620,30 +632,30 @@ header .nav-panel .link-display__4 .ribbon p {
     flex: 1 0 100%;
     width: 100%;
     height: 100%;
-    padding: 0.8rem 0.5rem;
+    padding: 2rem 5rem;
   }
   .text-column__right h2, .text-column__left h2 {
     margin: 0.5rem 0;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 1024px) {
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
   .text-column__right h2, .text-column__left h2 {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
   .text-column__right h2, .text-column__left h2 {
     font-size: 2rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
   .text-column__right h2, .text-column__left h2 {
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .text-slideshow__frame {
     width: 100%;
     height: 75%;
@@ -656,7 +668,7 @@ header .nav-panel .link-display__4 .ribbon p {
     display: none;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 1024px) {
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
   .text-slideshow__text {
     font-size: 1rem;
     letter-spacing: 0.15rem;
@@ -665,7 +677,7 @@ header .nav-panel .link-display__4 .ribbon p {
     text-decoration: none;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
   .text-slideshow__text {
     font-size: 1rem;
     letter-spacing: 0.1rem;
@@ -674,7 +686,7 @@ header .nav-panel .link-display__4 .ribbon p {
     text-decoration: none;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
   .text-slideshow__text {
     font-size: 0.65rem;
     letter-spacing: 0.05rem;
@@ -683,7 +695,7 @@ header .nav-panel .link-display__4 .ribbon p {
     text-decoration: none;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .dot-nav {
     height: 6%;
     padding: 0;
@@ -696,11 +708,11 @@ header .nav-panel .link-display__4 .ribbon p {
     border-width: 3px;
   }
   #section-4 h2 {
-    margin-left: 2rem;
-    margin-top: 6rem;
+    margin: 2em 7.5% 0 7.5%;
   }
   .cronologia {
-    padding: 0.5rem;
+    margin: 2em 0;
+    padding: 0 7.5%;
     display: grid;
     grid: repeat(12, 1fr)/1fr;
   }
@@ -711,24 +723,24 @@ header .nav-panel .link-display__4 .ribbon p {
     border-bottom: solid rgba(211, 211, 211, 0.774) 0.1rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 1024px) {
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
   .cronologia h3 {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
   .cronologia h3 {
     font-size: 2rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
   .cronologia h3 {
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .cronologia ul {
     font-size: 0.6rem;
     line-height: 0.7rem;
@@ -743,12 +755,12 @@ header .nav-panel .link-display__4 .ribbon p {
   }
   header .top-bar .nav-button {
     top: 2vh;
-    margin: 0;
     width: 3rem;
     height: 1.5rem;
   }
   header .header-body {
     justify-content: start;
+    padding-top: 25%;
   }
   header .header-body img {
     position: absolute;
@@ -773,9 +785,11 @@ header .nav-panel .link-display__4 .ribbon p {
   header .nav-panel {
     left: -130vw;
     width: 100vw;
-    padding: 15% 0 0;
+    padding: 0 0 0;
   }
   header .nav-panel ul {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
@@ -795,24 +809,24 @@ header .nav-panel .link-display__4 .ribbon p {
     line-height: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 1024px) {
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
   header .nav-panel .link-display__1 .ribbon p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
   header .nav-panel .link-display__1 .ribbon p {
     font-size: 2rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
   header .nav-panel .link-display__1 .ribbon p {
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   header .nav-panel .link-display__2 .ribbon {
     height: 5rem;
   }
@@ -820,24 +834,24 @@ header .nav-panel .link-display__4 .ribbon p {
     line-height: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 1024px) {
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
   header .nav-panel .link-display__2 .ribbon p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
   header .nav-panel .link-display__2 .ribbon p {
     font-size: 2rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
   header .nav-panel .link-display__2 .ribbon p {
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   header .nav-panel .link-display__3 {
     background-position-y: 0%;
   }
@@ -848,24 +862,24 @@ header .nav-panel .link-display__4 .ribbon p {
     line-height: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 1024px) {
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
   header .nav-panel .link-display__3 .ribbon p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
   header .nav-panel .link-display__3 .ribbon p {
     font-size: 2rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
   header .nav-panel .link-display__3 .ribbon p {
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   header .nav-panel .link-display__4 {
     background-position-y: 85%;
   }
@@ -876,18 +890,18 @@ header .nav-panel .link-display__4 .ribbon p {
     line-height: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 1024px) {
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
   header .nav-panel .link-display__4 .ribbon p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
+@media only screen and (max-width: 1200px) and (min-width: 701px) and (max-width: 1023px) {
   header .nav-panel .link-display__4 .ribbon p {
     font-size: 2rem;
     letter-spacing: 0.15rem;
   }
 }
-@media only screen and (min-width: 0px) and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
+@media only screen and (max-width: 1200px) and (min-width: 0px) and (max-width: 700px) {
   header .nav-panel .link-display__4 .ribbon p {
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
@@ -916,10 +930,12 @@ header .nav-panel .link-display__4 .ribbon p {
     max-height: 90vh;
   }
   header .header-body h1 {
-    margin: 3.5rem auto 0.5rem;
+    margin: 1.5rem auto 0.5rem;
   }
   header .header-body p {
     margin-top: 5vh;
     word-spacing: 0.4rem;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,6 +1,4 @@
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
-
-    // Seccion 0-1023px
+@media only screen and (max-width: 1200px) {
 
     .seccion{
         margin-top: 0;
@@ -33,7 +31,7 @@
         flex: 1 0 100%;
         width: 100%;
         height: 100%;
-        padding: .8rem .5rem;  
+        padding: 2rem 5rem;  
         
         h2{
             @include fontSize("large");
@@ -72,16 +70,15 @@
         }
     } 
 
-    //Cronología 0-1023px
-
     #section-4 h2{  
 
-        margin-left: 2rem;
-        margin-top: 6rem;
+        margin: 2em 7.5% 0 7.5%;
+
     }
 
     .cronologia{
-        padding: .5rem;
+        margin: 2em 0;
+        padding: 0 7.5% ;
         display: grid;
         grid: repeat(12, 1fr) / 1fr;
         
@@ -110,46 +107,47 @@
     header{   
         
         .top-bar{
-        height: 8%;
-        .nav-button{
-            top: 2vh;
-            margin: 0;
-            width: 3rem;
-            height: 1.5rem;
-        }
+            height: 8%;
+            .nav-button{
+                top: 2vh;
+                width: 3rem;
+                height: 1.5rem;
+            }
         }
 
         .header-body{
-        justify-content: start;
-        img{
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            margin: 0;
-            max-width: 90%;
-            height: auto;
-        }
+            justify-content: start;
+            padding-top: 25%;
 
-        p, h1{
-            display: block;
-            position: static;
-        }
+            img{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                max-width: 90%;
+                height: auto;
+            }
 
-        p, h1{
-            margin-top: 4%;
-            padding: 0;
-        }
-        hr{
-            position: absolute;
-            bottom: 0;
-        }
+            p, h1{
+                display: block;
+                position: static;
+            }
+
+            p, h1{
+                margin-top: 4%;
+                padding: 0;
+            }
+            hr{
+                position: absolute;
+                bottom: 0;
+            }
 
         } 
 
         .nav-panel{
         left: -130vw;
         width: 100vw;
-        padding: 15% 0 0;
+        padding: 0 0 0;
         ul{
             -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;

@@ -89,7 +89,7 @@
 @mixin separador($lado){
     margin: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
 
   @if $lado == 'top'{
     border-top: solid 5px rgba(211, 211, 211, 0.774);

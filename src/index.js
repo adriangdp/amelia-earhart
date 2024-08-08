@@ -13,15 +13,21 @@ const buttonBars = [
 const navPanel = document.getElementById('nav-panel');
 
 
-navButton.addEventListener('click', ()=>{
+function navigationMenuHandler(){
+
     buttonBars.forEach((bar)=>{
         bar.classList.toggle('isMenuActive');
     })
 
     navPanel.classList.toggle('isMenuActive');
-    console.log('menu click');
-    }
-);
+    
+        
+}
+
+
+navButton.addEventListener('click', navigationMenuHandler);
+
+
 
 /*
 *
