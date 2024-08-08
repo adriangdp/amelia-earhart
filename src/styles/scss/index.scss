@@ -13,6 +13,7 @@ body{
   overflow-x: hidden;
 }
 
+
 h1, h2, 
 h3, h4, h5, 
 p, li, a{
@@ -102,17 +103,17 @@ em{
 .text-column{
 
   &__right{
-    width: 35%;
+    width: 40%;
     height: 100%;
-    padding: 6rem 3rem 0;
+    padding: 7rem;
     float: right;
     background: $background-alpha-1;
   }
 
   &__left{
-    width: 35%;
+    width: 40%;
     height: 100%;
-    padding: 6rem 3rem 0;
+    padding: 7rem;
     float: left;
     background: $background-alpha-1;
   }
@@ -173,14 +174,14 @@ em{
 
 #section-4 h2{  
   max-width: 100%;
-  margin-left: 4rem;
+  margin-left: 7rem;
   margin-top: 10rem;
 }
 
 .cronologia{
   width: 100%;
   height: 100%;
-  padding: 4rem;
+  padding: 7rem;
   display: grid;
   grid: repeat(6, 1fr) / 2fr 4.25fr .5fr 2fr 4.25fr;
   
@@ -188,13 +189,13 @@ em{
   h3{
     @include fontSize("Xlarge");
     font-family: $font-fam-header;
+    padding: 5rem 0;
     border-top: solid rgba(211, 211, 211, 0.774) .1rem;
-    padding-top: .6rem;
   }
   
   ul{
     border-top: solid rgba(211, 211, 211, 0.774) .1rem;
-    padding-top: .6rem;
+    padding: 5rem 0;
     list-style: disc;
   }
 
